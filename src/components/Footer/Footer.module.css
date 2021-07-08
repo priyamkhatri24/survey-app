@@ -1,0 +1,35 @@
+.Footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 30px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    box-shadow: 0px 5px 15px -5px rgba(164,164,164,0.7);
+    margin-top: 15px;
+    animation: appear 1s 5s forwards;
+    visibility: hidden;
+    position: relative;
+    
+    
+}
+.footerPara {
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+ion-icon {
+    font-size: 13px
+}
+
+@keyframes appear {
+  to {visibility: visible;}
+
+  from{top: 30px}
+  to{top: 0px}
+}

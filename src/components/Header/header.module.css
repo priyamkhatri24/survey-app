@@ -1,0 +1,41 @@
+.header {
+    height: 40%;
+    width: 100%;
+    background-color: #FB6C0C;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    color: white
+}
+.heading {
+    text-align: left;
+    width: 75%;
+    margin: 0px auto;
+    font-size: 20px;
+    animation: appear 1s 1s forwards;
+    visibility: hidden;
+    position: relative;
+}
+.subHeading {
+    text-align: left;
+    width: 75%;
+    margin: 10px auto;
+    font-size: 17px;
+    animation: appear 1s 1s forwards;
+    visibility: hidden;
+    position: relative;
+}
+.para {
+    text-align: left;
+    width: 75%;
+    margin: 0px auto;
+    font-size: 15px;
+   animation: appear 1s 2s forwards;
+    position: relative;
+    visibility: hidden;
+}
+@keyframes appear {
+  to {visibility: visible;}
+
+  from{top: 30px}
+  to{top: 0px}
+}
