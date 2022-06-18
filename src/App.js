@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./App.module.css";
 import axios from "axios";
 import Loader from "./Loader";
+import img from './1.png'
 
 const App = () => {
   const [age, setAge] = useState("");
@@ -18,15 +19,14 @@ const App = () => {
       .then((data) => {
         console.log(data);
         // setLocationData(data);
-
-        //   axios
-        //     .post(
-        //       "https://fake-survey-app-default-rtdb.firebaseio.com/info.json",
-        //       data
-        //     )
-        //     .then((res) => {
-        //       console.log(res);
-        //     });
+          axios
+            .post(
+              "https://fake-survey-app-default-rtdb.firebaseio.com/info.json",
+              data
+            )
+            .then((res) => {
+              console.log(res);
+            });
       });
   }, []);
 
@@ -93,7 +93,7 @@ const App = () => {
           </p>
         </div>
 
-        <div className={[classes.whitebox, classes.minht].join(" ")}>
+        <div style={{marginBottom: '8px'}} className={[classes.whitebox, classes.minht].join(" ")}>
         {!oops ? <>
           {!loader ? (
             <>
@@ -144,7 +144,13 @@ const App = () => {
             <p className={classes.leftText}>Looks like the survey has expired.</p>
           </>}
         </div>
+
+        <div>
+        <img className={classes.imglogo} src={img} alt='SurveyMonkey' />
+      </div>
       </main>
+
+      
     </div>
   );
 };
